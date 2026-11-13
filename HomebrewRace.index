@@ -5,7 +5,7 @@
 		<description>Razas originales de HomebrewRace para Aurora Builder.</description>
 		<author url="https://github.com/kevdea247/HomebrewRace">HomebrewRace contributors</author>
 		<update version="1.0.0">
-			<file name="volos-guide-to-monsters.index" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/volos-guide-to-monsters.index" />
+			<file name="HomebrewRace.index" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/HomebrewRace.index" />
 		</update>
 	</info>
 	<files>
