@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>HomebrewRace</name>
+		<description>Razas originales de HomebrewRace para Aurora Builder.</description>
+		<author url="https://github.com/kevdea247/HomebrewRace">HomebrewRace contributors</author>
+		<update version="1.0.0">
+			<file name="volos-guide-to-monsters.index" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/volos-guide-to-monsters.index" />
+		</update>
+	</info>
+	<files>
+		<file name="source.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/source.xml" />
+		<file name="languages.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/languages.xml" />
+		<file name="race-fomoria.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-fomoria.xml" />
+		<file name="race-satiro.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-satiro.xml" />
+		<file name="race-noctuido.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-noctuido.xml" />
+		<file name="race-frios.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-frios.xml" />
+		<file name="race-chiroptero.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-chiroptero.xml" />
+		<file name="race-skliros.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-skliros.xml" />
+		<file name="race-nautilus.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-nautilus.xml" />
+		<file name="race-leporidos.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-leporidos.xml" />
+		<file name="race-gigante.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-gigante.xml" />
+		<file name="race-coleoptero.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-coleoptero.xml" />
+	</files>
+</index>

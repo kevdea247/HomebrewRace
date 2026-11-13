@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Coleóptero</name>
+		<update version="1.0.0">
+			<file name="race-coleoptero.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-coleoptero.xml" />
+		</update>
+	</info>
+	<element name="Coleóptero" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_COLEOPTERO">
+		<description>
+			<p class="flavor">Artrópodos numerosos con exoesqueleto duro y gran fuerza para su tamaño. Son criaturas solitarias y adaptables, con cuernos que emplean para competir y un gusto peculiar por las heces.</p>
+			<h4>RASGOS COLEÓPTERO</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Fuerza aumenta en 2 y tu Constitución en 1.</p>
+			<p><span class="feature">Edad.</span> Alcanzas la madurez al año, tras una metamorfosis, y vives alrededor de 60 años.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales.</p>
+			<p><span class="feature">Tamaño.</span> Mides entre 6 y 13 pies. El tamaño de esta opción de raza se registra como Mediano; consulta con el DM para usar Grande.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando y trepando es de 30 pies; armadura pesada no reduce tu velocidad.</p>
+			<p><span class="feature">Élitros.</span> Tienes alas tras tu exoesqueleto que puedes usar para volar a una velocidad de 15 pies.</p>
+			<p><span class="feature">Visión en la oscuridad.</span> Ves en la oscuridad a 60 pies como si fuera luz tenue, pero no distingues colores en ella.</p>
+			<p><span class="feature">Fuerza máxima.</span> Tienes ventaja en todas las tiradas de Fuerza.</p>
+			<p><span class="feature">Cornada.</span> Tus cuernos son armas con las que eres competente e infligen 1d4 de daño contundente. Como acción adicional, una criatura golpeada debe superar una prueba de Fuerza contra una CD de 8 + tu modificador de Fuerza + tu bonificador por competencia. Si falla, la empujas hasta 10 pies en la dirección que elijas, queda derribada e infliges 1d4 de daño contundente adicional.</p>
+			<p><span class="feature">Comedor de heces.</span> Puedes alimentarte de heces para recuperar 1d4 + tu modificador de Constitución puntos de golpe.</p>
+			<p><span class="feature">Cuatro brazos.</span> Puedes sostener cuatro objetos a la vez, pero no más de un escudo o dos armas a la vez.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y Coleopteran.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="strength" value="2" />
+			<stat name="constitution" value="1" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:climb" value="30" bonus="base" />
+			<stat name="innate speed:fly" value="15" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_HOMEBREWRACE_LANGUAGE_COLEOPTERAN" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_COLEOPTERO" />
+		</rules>
+	</element>
+	<element name="Rasgos Coleóptero" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_COLEOPTERO">
+		<description>
+			<p><b>Élitros.</b> Tienes alas tras tu exoesqueleto que puedes usar para volar a una velocidad de 15 pies.</p>
+			<p><b>Fuerza máxima.</b> Tienes ventaja en todas las tiradas de Fuerza.</p>
+			<p><b>Cornada.</b> Tus cuernos son armas con las que eres competente e infligen 1d4 de daño contundente. Como acción adicional, una criatura golpeada debe superar una prueba de Fuerza contra una CD de 8 + tu modificador de Fuerza + tu bonificador por competencia. Si falla, la empujas hasta 10 pies en la dirección que elijas, queda derribada e infliges 1d4 de daño contundente adicional.</p>
+			<p><b>Comedor de heces.</b> Puedes alimentarte de heces para recuperar 1d4 + tu modificador de Constitución puntos de golpe.</p>
+			<p><b>Cuatro brazos.</b> Puedes sostener cuatro objetos a la vez, pero no más de un escudo o dos armas a la vez.</p>
+		</description>
+		<sheet>
+			<description>Élitros: vuelo 15 pies; ventaja en todas las tiradas de Fuerza; cuernos 1d4 contundente y cornada; cuatro brazos; puedes alimentarte de heces para recuperar 1d4 + CON PG.</description>
+		</sheet>
+	</element>
+</elements>

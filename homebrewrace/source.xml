@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>HomebrewRace</name>
+		<update version="1.0.0">
+			<file name="source.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/source.xml" />
+		</update>
+	</info>
+	<element name="HomebrewRace" type="Source" source="Core" id="ID_HOMEBREWRACE_SOURCE">
+		<description>
+			<p>Razas originales de HomebrewRace.</p>
+		</description>
+		<setters>
+			<set name="abbreviation">HBR</set>
+			<set name="url">https://github.com/kevdea247/HomebrewRace</set>
+			<set name="official">false</set>
+			<set name="supplement">true</set>
+		</setters>
+	</element>
+</elements>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Fomoria</name>
+		<update version="1.0.0">
+			<file name="race-fomoria.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-fomoria.xml" />
+		</update>
+	</info>
+	<element name="Fomoria" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_FOMORIA">
+		<description>
+			<p class="flavor">Serpientes inteligentes que viven en tribus formadas por miembros de su misma clase. Prefieren los ambientes cálidos y pueden tener distintas subespecies, colores, tamaños y caracteres.</p>
+			<h4>RASGOS FOMORIA</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Destreza aumenta en 2.</p>
+			<p><span class="feature">Edad.</span> Nacen de huevos incubados durante 6 meses. Maduran entre los 5 y los 20 años y viven entre 40 y 100 años, según la subespecie.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales y siguen las leyes de su clan.</p>
+			<p><span class="feature">Tamaño.</span> Su tamaño varía según la subespecie; suelen medir entre 6 y 9 pies. El tamaño de esta opción de raza se registra como Mediano.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 40 pies y tu velocidad trepando es de 40 pies.</p>
+			<p><span class="feature">Visión infrarroja.</span> Percibes el calor a 60 pies y puedes detectar criaturas u objetos que emitan calor aunque no estén a la vista.</p>
+			<p><span class="feature">Movimiento serpentino.</span> Te desplazas normalmente por bosques densos, pantanos, montañas escarpadas y escombros.</p>
+			<p><span class="feature">Mordisco venenoso.</span> Puedes usar tu acción para atacar con tus colmillos; según la subespecie, el ataque puede envenenar, paralizar o infligir daño ácido.</p>
+			<p><span class="feature">Resistencia al daño.</span> Tienes resistencia al daño de veneno. Algunas subespecies son inmunes al veneno o a la parálisis.</p>
+			<p><span class="feature">Sangre fría.</span> Tienes desventaja en las pruebas de Destreza en climas fríos.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y Creeping Tongue.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="dexterity" value="2" />
+			<stat name="innate speed" value="40" bonus="base" />
+			<stat name="innate speed:climb" value="40" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_HOMEBREWRACE_LANGUAGE_CREEPING_TONGUE" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_FOMORIA" />
+		</rules>
+	</element>
+	<element name="Rasgos Fomoria" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_FOMORIA">
+		<description>
+			<p><b>Visión infrarroja.</b> Percibes el calor a 60 pies y detectas criaturas y objetos que emitan calor aunque no estén a la vista.</p>
+			<p><b>Movimiento serpentino.</b> Te desplazas normalmente por bosques densos, pantanos, montañas escarpadas y escombros.</p>
+			<p><b>Mordisco venenoso.</b> Como acción, atacas con tus colmillos; el efecto (veneno, parálisis o daño ácido) depende de tu subespecie.</p>
+			<p><b>Resistencia al veneno.</b> Tienes resistencia al daño de veneno. Algunas subespecies son inmunes al veneno o a la parálisis.</p>
+			<p><b>Sangre fría.</b> Tienes desventaja en las pruebas de Destreza en climas fríos.</p>
+		</description>
+		<sheet>
+			<description>Visión infrarroja a 60 pies; movimiento serpentino; mordisco con efecto según la subespecie; resistencia al daño de veneno; desventaja en pruebas de Destreza en climas fríos.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+</elements>

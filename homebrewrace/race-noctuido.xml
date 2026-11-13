@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Noctuido</name>
+		<update version="1.0.0">
+			<file name="race-noctuido.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-noctuido.xml" />
+		</update>
+	</info>
+	<element name="Noctuido" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_NOCTUIDO">
+		<description>
+			<p class="flavor">Grandes insectos inteligentes que viven en colonias, vuelan y se alimentan de néctar de flores. Forman grandes colonias en bosques y ciudades y se organizan en una ceremonia anual que sincroniza su reproducción.</p>
+			<h4>RASGOS NOCTUIDO</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Sabiduría aumenta en 2 y tu Destreza en 1.</p>
+			<p><span class="feature">Edad.</span> Naces como larva; alcanzas la madurez a los 3 años tras la metamorfosis y vives alrededor de 20 años.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales y siguen las normas de su religión.</p>
+			<p><span class="feature">Tamaño.</span> Eres Mediano.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 30 pies, volando de 40 pies y trepando de 30 pies.</p>
+			<p><span class="feature">Visión en la oscuridad.</span> Ves en la oscuridad a 60 pies como si fuera luz tenue, pero no distingues colores en ella.</p>
+			<p><span class="feature">Vuelo.</span> No puedes volar si estás mojado o llevas armadura pesada.</p>
+			<p><span class="feature">Patas insectoides.</span> Puedes caminar por paredes y techos.</p>
+			<p><span class="feature">Antenas.</span> Tienes vista ciega a 25 pies.</p>
+			<p><span class="feature">Cuatro brazos.</span> Puedes sostener cuatro objetos a la vez; no puedes llevar más de un escudo o dos armas a la vez.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y Nocturno.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="wisdom" value="2" />
+			<stat name="dexterity" value="1" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:fly" value="40" bonus="base" />
+			<stat name="innate speed:climb" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_HOMEBREWRACE_LANGUAGE_NOCTURNO" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NOCTUIDO" />
+		</rules>
+	</element>
+	<element name="Rasgos Noctuido" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NOCTUIDO">
+		<description>
+			<p><b>Vuelo.</b> No puedes volar si estás mojado o llevas armadura pesada.</p>
+			<p><b>Patas insectoides.</b> Puedes caminar por paredes y techos.</p>
+			<p><b>Antenas.</b> Tienes vista ciega a 25 pies.</p>
+			<p><b>Cuatro brazos.</b> Puedes sostener cuatro objetos a la vez, pero no más de un escudo o dos armas a la vez.</p>
+		</description>
+		<sheet>
+			<description>Vuelo 40 pies (no si estás mojado o llevas armadura pesada); caminas por paredes y techos; vista ciega 25 pies; cuatro brazos.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+			<stat name="blindsight:range" value="25" bonus="base" />
+		</rules>
+	</element>
+</elements>

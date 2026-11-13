@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Sátiro</name>
+		<update version="1.0.0">
+			<file name="race-satiro.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-satiro.xml" />
+		</update>
+	</info>
+	<element name="Sátiro" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_SATIRO">
+		<description>
+			<p class="flavor">Bestiales de gran tamaño y carácter rudo que habitan en Milthard y, en menor medida, en Halsengard. Prefieren los ambientes abiertos con praderas y montañas; son pacíficos, muy religiosos y suelen llevar una barba alargada.</p>
+			<h4>RASGOS SÁTIRO</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Carisma aumenta en 2 y tu Sabiduría en 1.</p>
+			<p><span class="feature">Edad.</span> Alcanzas la madurez alrededor de los 16 años y vives aproximadamente 100 años.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales y profundamente religiosos.</p>
+			<p><span class="feature">Tamaño.</span> Eres Mediano.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 30 pies. Tienes velocidad trepando de 30 pies.</p>
+			<p><span class="feature">Carga.</span> Si te mueves al menos 10 pies en línea recta hacia un objetivo y lo golpeas con un ataque cuerpo a cuerpo durante el mismo turno, infliges 1d6 de daño adicional. Aumenta a 2d6 al nivel 7, 3d6 al nivel 13 y 4d6 al nivel 17.</p>
+			<p><span class="feature">Caminar por paredes.</span> Eres un escalador excelente. En una pendiente puedes realizar acciones y moverte normalmente como si estuvieras en terreno normal.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y silvano.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="charisma" value="2" />
+			<stat name="wisdom" value="1" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:climb" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_SYLVAN" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_SATIRO" />
+		</rules>
+	</element>
+	<element name="Carga y caminar por paredes" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_SATIRO">
+		<description>
+			<p><b>Carga.</b> Si te mueves al menos 10 pies en línea recta hacia un objetivo y lo golpeas con un ataque cuerpo a cuerpo durante el mismo turno, infliges 1d6 de daño adicional. Aumenta a 2d6 al nivel 7, 3d6 al nivel 13 y 4d6 al nivel 17.</p>
+			<p><b>Caminar por paredes.</b> Eres un escalador excelente. En una pendiente puedes realizar acciones y moverte normalmente como si estuvieras en terreno normal.</p>
+		</description>
+		<sheet>
+			<description>Carga: daño adicional 1d6 (2d6 a nivel 7, 3d6 a nivel 13 y 4d6 a nivel 17) tras avanzar 10 pies en línea recta y acertar un ataque cuerpo a cuerpo. Caminas por paredes y pendientes.</description>
+		</sheet>
+	</element>
+</elements>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Friós</name>
+		<update version="1.0.0">
+			<file name="race-frios.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-frios.xml" />
+		</update>
+	</info>
+	<element name="Friós" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_FRIOS">
+		<description>
+			<p class="flavor">Humanoides que habitan el Eterno Blanco, parcialmente cubiertos por un hielo casi imposible de derretir. Son inmunes al frío y resistentes al calor; guardan en secreto las herramientas de un mineral extraño que arde bajo presión.</p>
+			<h4>RASGOS FRIÓS</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Constitución aumenta en 2, tu Sabiduría en 1 y tu Carisma disminuye en 2.</p>
+			<p><span class="feature">Edad.</span> Su esperanza de vida es indefinida; no pueden envejecer.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales y mantienen en secreto las leyes y costumbres de su civilización.</p>
+			<p><span class="feature">Tamaño.</span> Eres Mediano.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 25 pies.</p>
+			<p><span class="feature">Armas ígneas.</span> Las armas hechas de su material óseo infligen 1d4 de daño de fuego adicional; aumenta a 2d4 al nivel 6, 3d4 al nivel 11 y 4d4 al nivel 16.</p>
+			<p><span class="feature">Visión en la oscuridad.</span> Ves en la oscuridad a 60 pies como si fuera luz tenue, pero no distingues colores en ella.</p>
+			<p><span class="feature">Resistencia al daño.</span> Tienes inmunidad al daño de frío y resistencia al daño de fuego.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y Frozen Tongue.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="constitution" value="2" />
+			<stat name="wisdom" value="1" />
+			<stat name="charisma" value="-2" />
+			<stat name="innate speed" value="25" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_HOMEBREWRACE_LANGUAGE_FROZEN_TONGUE" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_FRIOS" />
+		</rules>
+	</element>
+	<element name="Armas ígneas y resistencia" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_FRIOS">
+		<description>
+			<p><b>Armas ígneas.</b> Las armas hechas de su material óseo infligen 1d4 de daño de fuego adicional; aumenta a 2d4 al nivel 6, 3d4 al nivel 11 y 4d4 al nivel 16.</p>
+			<p><b>Inmunidad al frío.</b> Eres inmune al daño de frío.</p>
+			<p><b>Resistencia al fuego.</b> Tienes resistencia al daño de fuego.</p>
+		</description>
+		<sheet>
+			<description>Armas óseas: daño de fuego adicional 1d4 (2d4 al nivel 6, 3d4 al nivel 11, 4d4 al nivel 16). Inmunidad al frío y resistencia al fuego.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+		</rules>
+	</element>
+</elements>

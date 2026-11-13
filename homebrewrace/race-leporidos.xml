@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Lepóridos</name>
+		<update version="1.0.0">
+			<file name="race-leporidos.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-leporidos.xml" />
+		</update>
+	</info>
+	<element name="Lepóridos" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_LEPORIDOS">
+		<description>
+			<p class="flavor">Pequeñas bestias de los bosques y praderas de Halsengard. Habitan ciudades subterráneas conectadas por túneles y tienen una esperanza de vida corta.</p>
+			<h4>RASGOS LEPÓRIDOS</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Sabiduría aumenta en 2 y tu Carisma en 1.</p>
+			<p><span class="feature">Edad.</span> Creces rápidamente, alcanzas la madurez a los 3 años y vives alrededor de 30 años.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales y siguen las reglas de la naturaleza.</p>
+			<p><span class="feature">Tamaño.</span> Eres Pequeño; mides entre 3 y 4 pies y pesas alrededor de 20 kg.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 40 pies.</p>
+			<p><span class="feature">Buen oído.</span> Tienes ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído.</p>
+			<p><span class="feature">Movimiento saltarín.</span> Tienes ventaja en todas las pruebas de Acrobacias.</p>
+			<p><span class="feature">Furia de los pequeños.</span> Una vez por turno, al atacar a una criatura de mayor tamaño, infliges daño adicional igual a tu bonificador por competencia.</p>
+			<p><span class="feature">Entrenamiento de combate pequeño.</span> Tienes competencia con dagas, arcos cortos, hondas, espadas cortas y cerbatanas.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y silvano.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="wisdom" value="2" />
+			<stat name="charisma" value="1" />
+			<stat name="innate speed" value="40" bonus="base" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_SYLVAN" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_LEPORIDOS" />
+		</rules>
+	</element>
+	<element name="Movimiento saltarín y entrenamiento de combate" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_LEPORIDOS">
+		<description>
+			<p><b>Buen oído.</b> Tienes ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído.</p>
+			<p><b>Movimiento saltarín.</b> Tienes ventaja en todas las pruebas de Acrobacias.</p>
+			<p><b>Furia de los pequeños.</b> Una vez por turno, al atacar a una criatura de mayor tamaño, infliges daño adicional igual a tu bonificador por competencia.</p>
+			<p><b>Entrenamiento de combate pequeño.</b> Tienes competencia con dagas, arcos cortos, hondas, espadas cortas y cerbatanas.</p>
+		</description>
+		<sheet>
+			<description>Ventaja en Percepción basada en el oído y en Acrobacias. Una vez por turno, daño adicional igual al bonificador por competencia contra criaturas mayores.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_DAGGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTBOW" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SLING" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTSWORD" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_BLOWGUN" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Gigante</name>
+		<update version="1.0.0">
+			<file name="race-gigante.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-gigante.xml" />
+		</update>
+	</info>
+	<element name="Gigante" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_GIGANTE">
+		<description>
+			<p class="flavor">Humanoides de gran tamaño que habitan las zonas frías del hemisferio norte. Son reservados, prefieren las montañas y los bosques y pueden desatar una furia devastadora si se provoca su ira.</p>
+			<h4>RASGOS GIGANTE</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Constitución aumenta en 2, tu Fuerza en 1 y tu Destreza disminuye en 2.</p>
+			<p><span class="feature">Edad.</span> Maduras alrededor de los 50 años y puedes vivir aproximadamente 1000 años.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales y siguen las reglas de la naturaleza.</p>
+			<p><span class="feature">Tamaño.</span> Mides entre 13 y 23 pies. El tamaño de esta opción de raza se registra como Grande; consulta con el DM si tu personaje debe ser Enorme.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 30 pies y no se reduce por llevar armadura pesada.</p>
+			<p><span class="feature">Mal oído.</span> Tienes desventaja en las pruebas que dependan del oído.</p>
+			<p><span class="feature">Rugido gigante.</span> Como acción, las criaturas que puedan oírte a 60 pies deben superar una salvación de Constitución (CD 8 + tu modificador de Constitución + tu bonificador por competencia). Si fallan, reciben 1d10 de daño y quedan ensordecidas durante 1 minuto; con una salvación exitosa reciben la mitad del daño. El daño aumenta a 2d10 al nivel 6, 3d10 al nivel 11 y 5d10 al nivel 16. Se recarga con un descanso corto.</p>
+			<p><span class="feature">Resistencia al daño.</span> Tienes resistencia al daño contundente que no provenga de armas mágicas.</p>
+			<p><span class="feature">Combate gigante.</span> Tienes competencia con hachas de batalla, hachas de mano y martillos de guerra. Tus golpes sin armas infligen 1d4 de daño adicional.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y gigante.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="constitution" value="2" />
+			<stat name="strength" value="1" />
+			<stat name="dexterity" value="-2" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_LARGE" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_GIANT" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_GIGANTE" />
+		</rules>
+	</element>
+	<element name="Rugido y combate gigante" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_GIGANTE">
+		<description>
+			<p><b>Mal oído.</b> Tienes desventaja en las pruebas que dependan del oído.</p>
+			<p><b>Rugido gigante.</b> Como acción, las criaturas que puedan oírte a 60 pies deben superar una salvación de Constitución (CD 8 + tu modificador de Constitución + tu bonificador por competencia). Si fallan, reciben 1d10 de daño y quedan ensordecidas durante 1 minuto; con una salvación exitosa reciben la mitad del daño. El daño aumenta a 2d10 al nivel 6, 3d10 al nivel 11 y 5d10 al nivel 16. Se recarga con un descanso corto.</p>
+			<p><b>Resistencia al daño contundente.</b> Tienes resistencia al daño contundente que no provenga de armas mágicas.</p>
+			<p><b>Combate gigante.</b> Tienes competencia con hachas de batalla, hachas de mano y martillos de guerra. Tus golpes sin armas infligen 1d4 de daño adicional.</p>
+			<p><b>Armadura pesada.</b> Llevar armadura pesada no reduce tu velocidad.</p>
+		</description>
+		<sheet>
+			<description>Rugido a 60 pies (CD 8 + CON + competencia), 1d10 de daño y ensordecido con fallo; 2d10 al nivel 6, 3d10 al 11 y 5d10 al 16. Descanso corto para recargar.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_BATTLEAXE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_HANDAXE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WARHAMMER" />
+		</rules>
+	</element>
+</elements>

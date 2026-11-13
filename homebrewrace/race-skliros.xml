@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Skliros</name>
+		<update version="1.0.0">
+			<file name="race-skliros.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-skliros.xml" />
+		</update>
+	</info>
+	<element name="Skliros" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_SKLIROS">
+		<description>
+			<p class="flavor">Bestiales enormes que habitan desiertos y praderas de Ceruleath y Milthard. Son solitarios y territoriales, con cuerpos cubiertos de placas duras que los protegen de los ataques.</p>
+			<h4>RASGOS SKLIROS</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Constitución aumenta en 3 y tu Carisma disminuye en 1.</p>
+			<p><span class="feature">Edad.</span> Alcanzas la madurez alrededor de los 15 años y vives aproximadamente 70 años.</p>
+			<p><span class="feature">Alineamiento.</span> Eres neutral y velas por tu propio bienestar.</p>
+			<p><span class="feature">Tamaño.</span> Eres Grande; mides alrededor de 6,5 pies y pesas aproximadamente 200 kg.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 30 pies y no se reduce por llevar armadura pesada.</p>
+			<p><span class="feature">Armadura natural.</span> Si te plantas y eres golpeado por un ataque no mágico, reduces el daño a la mitad.</p>
+			<p><span class="feature">Combate Skliro.</span> Tienes competencia con martillos de guerra y espadones. No puedes llevar escudo.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="constitution" value="3" />
+			<stat name="charisma" value="-1" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_LARGE" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_SKLIROS" />
+		</rules>
+	</element>
+	<element name="Armadura natural y combate Skliro" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_SKLIROS">
+		<description>
+			<p><b>Armadura natural.</b> Si te plantas y eres golpeado por un ataque no mágico, reduces el daño a la mitad.</p>
+			<p><b>Combate Skliro.</b> Tienes competencia con martillos de guerra y espadones. No puedes llevar escudo.</p>
+			<p><b>Velocidad.</b> Llevar armadura pesada no reduce tu velocidad.</p>
+		</description>
+		<sheet>
+			<description>Reduce a la mitad el daño de un ataque no mágico al plantarte; competencia con martillos de guerra y espadones; no puedes llevar escudo; armadura pesada no reduce tu velocidad.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WARHAMMER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATSWORD" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>HomebrewRace Languages</name>
+		<update version="1.0.0">
+			<file name="languages.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/languages.xml" />
+		</update>
+	</info>
+	<element name="Creeping Tongue" type="Language" source="HomebrewRace" id="ID_HOMEBREWRACE_LANGUAGE_CREEPING_TONGUE">
+		<supports>Exotic</supports>
+		<description><p>Idioma propio de los Fomoria.</p></description>
+		<setters><set name="exotic">true</set></setters>
+	</element>
+	<element name="Nocturno" type="Language" source="HomebrewRace" id="ID_HOMEBREWRACE_LANGUAGE_NOCTURNO">
+		<supports>Exotic</supports>
+		<description><p>Idioma propio de los Noctuidos.</p></description>
+		<setters><set name="exotic">true</set></setters>
+	</element>
+	<element name="Frozen Tongue" type="Language" source="HomebrewRace" id="ID_HOMEBREWRACE_LANGUAGE_FROZEN_TONGUE">
+		<supports>Exotic</supports>
+		<description><p>Idioma propio de los Friós.</p></description>
+		<setters><set name="exotic">true</set></setters>
+	</element>
+	<element name="Infraspeech" type="Language" source="HomebrewRace" id="ID_HOMEBREWRACE_LANGUAGE_INFRASPEECH">
+		<supports>Exotic</supports>
+		<description><p>Idioma propio de los Chiropteros.</p></description>
+		<setters><set name="exotic">true</set></setters>
+	</element>
+	<element name="Cephalopod" type="Language" source="HomebrewRace" id="ID_HOMEBREWRACE_LANGUAGE_CEPHALOPOD">
+		<supports>Exotic</supports>
+		<description><p>Idioma propio de los Nautilus.</p></description>
+		<setters><set name="exotic">true</set></setters>
+	</element>
+	<element name="Coleopteran" type="Language" source="HomebrewRace" id="ID_HOMEBREWRACE_LANGUAGE_COLEOPTERAN">
+		<supports>Exotic</supports>
+		<description><p>Idioma propio de los Coleópteros.</p></description>
+		<setters><set name="exotic">true</set></setters>
+	</element>
+</elements>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Nautilus</name>
+		<update version="1.0.0">
+			<file name="race-nautilus.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-nautilus.xml" />
+		</update>
+	</info>
+	<element name="Nautilus" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_NAUTILUS">
+		<description>
+			<p class="flavor">Cefalópodos pequeños, muy inteligentes y ligados a las profundidades del océano. Tienen ocho brazos, pueden cambiar de color y comunicarse entre sí; su sociedad es libre y curiosa por otras culturas.</p>
+			<h4>RASGOS NAUTILUS</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Inteligencia aumenta en 2 y tu Constitución en 1.</p>
+			<p><span class="feature">Edad.</span> Naces de huevos incubados durante 6 meses, alcanzas la madurez a los 5 años y vives alrededor de 50 años.</p>
+			<p><span class="feature">Alineamiento.</span> Eres neutral; tu cultura es muy liberal.</p>
+			<p><span class="feature">Tamaño.</span> Eres Pequeño y mides alrededor de 4 pies.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando, trepando y nadando es de 30 pies.</p>
+			<p><span class="feature">Caparazón.</span> No puedes llevar armadura. Tu CA es 14; aumenta a 15 al nivel 3, 16 al nivel 6, 17 al nivel 7, 18 al nivel 13 y 19 al nivel 17.</p>
+			<p><span class="feature">Ocho brazos.</span> No necesitas componentes somáticos para lanzar conjuros. Si no atacas en tu turno, puedes realizar una acción adicional (que no sea atacar ni moverte). Puedes sostener cuatro objetos a la vez, pero no más de un escudo o dos armas.</p>
+			<p><span class="feature">Cambio de color.</span> Como acción puedes cambiar de color y mimetizarte con el ambiente, obteniendo un bonificador de +5 a Sigilo.</p>
+			<p><span class="feature">Criatura acuática.</span> Puedes respirar dentro y fuera del agua.</p>
+			<p><span class="feature">Resistencia al daño.</span> Tienes resistencia al daño cortante.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común, abisal y Cephalopod.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="intelligence" value="2" />
+			<stat name="constitution" value="1" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:climb" value="30" bonus="base" />
+			<stat name="innate speed:swim" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_ABYSSAL" />
+			<grant type="Language" id="ID_HOMEBREWRACE_LANGUAGE_CEPHALOPOD" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS" />
+		</rules>
+	</element>
+	<element name="Caparazón y rasgos acuáticos" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS">
+		<description>
+			<p><b>Caparazón.</b> No puedes llevar armadura. Tu CA es 14; aumenta a 15 al nivel 3, 16 al nivel 6, 17 al nivel 7, 18 al nivel 13 y 19 al nivel 17.</p>
+			<p><b>Ocho brazos.</b> No necesitas componentes somáticos para lanzar conjuros. Si no atacas en tu turno, puedes realizar una acción adicional (que no sea atacar ni moverte). Puedes sostener cuatro objetos a la vez, pero no más de un escudo o dos armas.</p>
+			<p><b>Cambio de color.</b> Como acción puedes cambiar de color y mimetizarte con el ambiente, obteniendo un bonificador de +5 a Sigilo.</p>
+			<p><b>Criatura acuática.</b> Puedes respirar dentro y fuera del agua.</p>
+			<p><b>Resistencia al daño cortante.</b> Tienes resistencia al daño cortante.</p>
+		</description>
+		<sheet>
+			<description>CA 14 (15 al nivel 3, 16 al 6, 17 al 7, 18 al 13 y 19 al 17); no puedes llevar armadura; ocho brazos; cambio de color: acción para obtener +5 a Sigilo; respiras aire y agua.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING" />
+		</rules>
+	</element>
+</elements>

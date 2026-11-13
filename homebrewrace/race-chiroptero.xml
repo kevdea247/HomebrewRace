@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Chiroptero</name>
+		<update version="1.0.0">
+			<file name="race-chiroptero.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-chiroptero.xml" />
+		</update>
+	</info>
+	<element name="Chiroptero" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_CHIROPTERO">
+		<description>
+			<p class="flavor">Bestiales pequeños y nocturnos que habitan bosques, selvas, praderas y pantanos. Son ágiles en el aire, viven en ciudades subterráneas y usan el sonido para orientarse; suelen ser muy ruidosos y se llevan mal con los Noctuidos.</p>
+			<h4>RASGOS CHIROPTERO</h4>
+			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Carisma aumenta en 2.</p>
+			<p><span class="feature">Edad.</span> Creces rápidamente, alcanzas la madurez alrededor de los 6 años y vives aproximadamente 50 años.</p>
+			<p><span class="feature">Alineamiento.</span> La mayoría son legales, aunque siguen reglas propias de la naturaleza.</p>
+			<p><span class="feature">Tamaño.</span> Eres Pequeño.</p>
+			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 25 pies, volando de 45 pies y trepando de 30 pies.</p>
+			<p><span class="feature">Buen oído.</span> Tienes ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído.</p>
+			<p><span class="feature">Vuelo.</span> Despegar en combate consume tu movimiento.</p>
+			<p><span class="feature">Ecolocalización.</span> Como acción, emites un chasquido y detectas mediante el oído todo lo que no esté mágicamente oculto en un radio de 30 pies.</p>
+			<p><span class="feature">Visión superior en la oscuridad.</span> Tienes visión en la oscuridad a 120 pies.</p>
+			<p><span class="feature">Fotosensibilidad.</span> Tienes desventaja en las tiradas de ataque y pruebas de Sabiduría (Percepción) basadas en la vista cuando tú, el objetivo de tu ataque o lo que intentas percibir está bajo luz solar directa.</p>
+			<p><span class="feature">Entrenamiento de combate pequeño.</span> Tienes competencia con dagas, arcos cortos, hondas, espadas cortas y cerbatanas.</p>
+			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común e Infraspeech.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="charisma" value="2" />
+			<stat name="innate speed" value="25" bonus="base" />
+			<stat name="innate speed:fly" value="45" bonus="base" />
+			<stat name="innate speed:climb" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_HOMEBREWRACE_LANGUAGE_INFRASPEECH" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_CHIROPTERO" />
+		</rules>
+	</element>
+	<element name="Rasgos Chiroptero" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_CHIROPTERO">
+		<description>
+			<p><b>Buen oído.</b> Tienes ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído.</p>
+			<p><b>Vuelo.</b> Despegar en combate consume tu movimiento.</p>
+			<p><b>Ecolocalización.</b> Como acción, emites un chasquido y detectas mediante el oído todo lo que no esté mágicamente oculto en un radio de 30 pies.</p>
+			<p><b>Fotosensibilidad.</b> Tienes desventaja en las tiradas de ataque y pruebas de Sabiduría (Percepción) basadas en la vista cuando tú, el objetivo de tu ataque o lo que intentas percibir está bajo luz solar directa.</p>
+			<p><b>Entrenamiento de combate pequeño.</b> Tienes competencia con dagas, arcos cortos, hondas, espadas cortas y cerbatanas.</p>
+		</description>
+		<sheet>
+			<description>Ventaja en Percepción basada en el oído; ecolocalización a 30 pies; desventaja en ataques y Percepción basada en la vista bajo luz solar directa.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_DAGGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTBOW" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SLING" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTSWORD" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_BLOWGUN" />
+		</rules>
+	</element>
+</elements>
