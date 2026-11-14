@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
 	<info>
-		<name>Lepóridos</name>
+		<name>Leoporidos</name>
 		<update version="1.0.0">
-			<file name="race-leporidos.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-leporidos.xml" />
+			<file name="race-leoporidos.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-leoporidos.xml" />
 		</update>
 	</info>
-	<element name="Lepóridos" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_LEPORIDOS">
+	<element name="Leoporidos" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_LEPORIDOS">
 		<description>
 			<p class="flavor">Pequeñas bestias de los bosques y praderas de Halsengard. Habitan ciudades subterráneas conectadas por túneles y tienen una esperanza de vida corta.</p>
 			<h4>RASGOS LEPÓRIDOS</h4>
