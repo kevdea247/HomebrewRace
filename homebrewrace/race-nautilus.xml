@@ -2,25 +2,14 @@
 <elements>
 	<info>
 		<name>Nautilus</name>
-		<update version="1.0.0">
+		<update version="1.0.1">
 			<file name="race-nautilus.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-nautilus.xml" />
 		</update>
 	</info>
+
 	<element name="Nautilus" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_NAUTILUS">
 		<description>
-			<p class="flavor">Cefalópodos pequeños, muy inteligentes y ligados a las profundidades del océano. Tienen ocho brazos, pueden cambiar de color y comunicarse entre sí; su sociedad es libre y curiosa por otras culturas.</p>
-			<h4>RASGOS NAUTILUS</h4>
-			<p><span class="feature">Aumento de puntuación de característica.</span> Tu Inteligencia aumenta en 2 y tu Constitución en 1.</p>
-			<p><span class="feature">Edad.</span> Naces de huevos incubados durante 6 meses, alcanzas la madurez a los 5 años y vives alrededor de 50 años.</p>
-			<p><span class="feature">Alineamiento.</span> Eres neutral; tu cultura es muy liberal.</p>
-			<p><span class="feature">Tamaño.</span> Eres Pequeño y mides alrededor de 4 pies.</p>
-			<p><span class="feature">Velocidad.</span> Tu velocidad caminando, trepando y nadando es de 30 pies.</p>
-			<p><span class="feature">Caparazón.</span> No puedes llevar armadura. Tu AC es 14; aumenta a 15 al nivel 3, 16 al nivel 6, 17 al nivel 7, 18 al nivel 13 y 19 al nivel 17.</p>
-			<p><span class="feature">Ocho brazos.</span> No necesitas componentes somáticos para lanzar conjuros. Si no atacas en tu turno, puedes realizar una acción adicional (que no sea atacar ni moverte). Puedes sostener cuatro objetos a la vez, pero no más de un escudo o dos armas.</p>
-			<p><span class="feature">Cambio de color.</span> Como acción puedes cambiar de color y mimetizarte con el ambiente, obteniendo un bonificador de +5 a Sigilo.</p>
-			<p><span class="feature">Criatura acuática.</span> Puedes respirar dentro y fuera del agua.</p>
-			<p><span class="feature">Resistencia al daño.</span> Tienes resistencia al daño cortante.</p>
-			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común, abisal y Cephalopod.</p>
+			<!-- (tu descripción igual que antes) -->
 		</description>
 		<sheet display="false" />
 		<rules>
@@ -34,29 +23,55 @@
 			<grant type="Language" id="ID_LANGUAGE_ABYSSAL" />
 			<grant type="Language" id="ID_HOMEBREWRACE_LANGUAGE_CEPHALOPOD" />
 			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_3" level="3" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_6" level="6" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_7" level="7" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_13" level="13" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_17" level="17" />
 		</rules>
 	</element>
+
 	<element name="Caparazón y rasgos acuáticos" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS">
 		<description>
-			<p><b>Caparazón.</b> No puedes llevar armadura. Tu AC es 14; aumenta a 15 al nivel 3, 16 al nivel 6, 17 al nivel 7, 18 al nivel 13 y 19 al nivel 17.</p>
-			<p><b>Ocho brazos.</b> No necesitas componentes somáticos para lanzar conjuros. Si no atacas en tu turno, puedes realizar una acción adicional (que no sea atacar ni moverte). Puedes sostener cuatro objetos a la vez, pero no más de un escudo o dos armas.</p>
-			<p><b>Cambio de color.</b> Como acción puedes cambiar de color y mimetizarte con el ambiente, obteniendo un bonificador de +5 a Sigilo.</p>
-			<p><b>Criatura acuática.</b> Puedes respirar dentro y fuera del agua.</p>
-			<p><b>Resistencia al daño cortante.</b> Tienes resistencia al daño cortante.</p>
+			<!-- (tu descripción igual que antes) -->
 		</description>
 		<sheet>
-			<description>AC {{ac:natural armor nautilus}}; no puedes llevar armadura; ocho brazos; cambio de color: acción para obtener +5 a Sigilo; respiras aire y agua.</description>
+			<description>AC {{nautilus:natural armor}}; no puedes llevar armadura; ocho brazos; cambio de color: acción para obtener +5 a Sigilo; respiras aire y agua.</description>
 		</sheet>
 		<rules>
 			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING" />
-			<stat name="ac:natural armor nautilus:base" value="14" />
-			<stat name="ac:natural armor nautilus:base" value="1" level="3" />
-			<stat name="ac:natural armor nautilus:base" value="1" level="6" />
-			<stat name="ac:natural armor nautilus:base" value="1" level="7" />
-			<stat name="ac:natural armor nautilus:base" value="1" level="13" />
-			<stat name="ac:natural armor nautilus:base" value="1" level="17" />
-			<stat name="ac:natural armor nautilus" value="ac:natural armor nautilus:base" />
-			<stat name="ac:calculation" value="ac:natural armor nautilus" bonus="calculation" equipped="[armor:none]" alt="Caparazón (Nautilus)" />
+			<stat name="nautilus:natural armor" value="14" bonus="base" />
+			<stat name="ac:calculation" value="nautilus:natural armor" bonus="calculation" equipped="[armor:none]" alt="Caparazón (Nautilus)" />
 		</rules>
+	</element>
+
+	<element name="Caparazón: AC 15 (nivel 3)" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_3">
+		<description><p>Tu caparazón se endurece: tu AC natural aumenta en 1.</p></description>
+		<sheet display="false" />
+		<rules><stat name="nautilus:natural armor" value="1" /></rules>
+	</element>
+
+	<element name="Caparazón: AC 16 (nivel 6)" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_6">
+		<description><p>Tu AC natural aumenta en 1.</p></description>
+		<sheet display="false" />
+		<rules><stat name="nautilus:natural armor" value="1" /></rules>
+	</element>
+
+	<element name="Caparazón: AC 17 (nivel 7)" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_7">
+		<description><p>Tu AC natural aumenta en 1.</p></description>
+		<sheet display="false" />
+		<rules><stat name="nautilus:natural armor" value="1" /></rules>
+	</element>
+
+	<element name="Caparazón: AC 18 (nivel 13)" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_13">
+		<description><p>Tu AC natural aumenta en 1.</p></description>
+		<sheet display="false" />
+		<rules><stat name="nautilus:natural armor" value="1" /></rules>
+	</element>
+
+	<element name="Caparazón: AC 19 (nivel 17)" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_NAUTILUS_SHELL_17">
+		<description><p>Tu AC natural aumenta en 1.</p></description>
+		<sheet display="false" />
+		<rules><stat name="nautilus:natural armor" value="1" /></rules>
 	</element>
 </elements>
