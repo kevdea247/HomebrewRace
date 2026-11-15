@@ -17,7 +17,7 @@
 			<p><span class="feature">Velocidad.</span> Tu velocidad caminando es de 40 pies.</p>
 			<p><span class="feature">Buen oído.</span> Tienes ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído.</p>
 			<p><span class="feature">Movimiento saltarín.</span> Tienes ventaja en todas las pruebas de Acrobacias.</p>
-			<p><span class="feature">Furia de los pequeños.</span> Una vez por turno, al atacar a una criatura de mayor tamaño, infliges daño adicional igual a tu bonificador por competencia.</p>
+			<p><span class="feature">Furia de los pequeños.</span> Cuando haces daño a una criatura con un ataque o un conjuro y su tamaño es mayor que el tuyo, puedes hacer que el ataque o conjuro le inflija daño adicional igual a tu bonificador por competencia. Puedes usar este rasgo un número de veces igual a tu bonificador por competencia y recuperas todos los usos gastados al terminar un descanso largo. No puedes usarlo más de una vez por turno.</p>
 			<p><span class="feature">Entrenamiento de combate pequeño.</span> Tienes competencia con dagas, arcos cortos, hondas, espadas cortas y cerbatanas.</p>
 			<p><span class="feature">Idiomas.</span> Puedes hablar, leer y escribir en común y silvano.</p>
 		</description>
@@ -30,17 +30,17 @@
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_SYLVAN" />
 			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_LEOPORIDOS" />
+			<grant type="Racial Trait" id="ID_HOMEBREWRACE_RACIAL_TRAIT_LEOPORIDOS_FURY_OF_THE_SMALL" />
 		</rules>
 	</element>
 	<element name="Movimiento saltarín y entrenamiento de combate" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_LEOPORIDOS">
 		<description>
 			<p><b>Buen oído.</b> Tienes ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído.</p>
 			<p><b>Movimiento saltarín.</b> Tienes ventaja en todas las pruebas de Acrobacias.</p>
-			<p><b>Furia de los pequeños.</b> Una vez por turno, al atacar a una criatura de mayor tamaño, infliges daño adicional igual a tu bonificador por competencia.</p>
 			<p><b>Entrenamiento de combate pequeño.</b> Tienes competencia con dagas, arcos cortos, hondas, espadas cortas y cerbatanas.</p>
 		</description>
 		<sheet>
-			<description>Ventaja en Percepción basada en el oído y en Acrobacias. Una vez por turno, daño adicional igual al bonificador por competencia contra criaturas mayores.</description>
+			<description>Ventaja en Percepción basada en el oído y en Acrobacias.</description>
 		</sheet>
 		<rules>
 			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_DAGGER" />
@@ -49,5 +49,14 @@
 			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTSWORD" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_BLOWGUN" />
 		</rules>
+	</element>
+	<element name="Furia de los pequeños" type="Racial Trait" source="HomebrewRace" id="ID_HOMEBREWRACE_RACIAL_TRAIT_LEOPORIDOS_FURY_OF_THE_SMALL">
+		<description>
+			<p>Cuando haces daño a una criatura con un ataque o un conjuro y su tamaño es mayor que el tuyo, puedes hacer que el ataque o conjuro le inflija daño adicional igual a tu bonificador por competencia.</p>
+			<p class="indent">Puedes usar este rasgo un número de veces igual a tu bonificador por competencia y recuperas todos los usos gastados al terminar un descanso largo. No puedes usarlo más de una vez por turno.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>Cuando haces daño a una criatura con un ataque o un conjuro y su tamaño es mayor que el tuyo, puedes hacer que el ataque o conjuro le inflija {{proficiency}} de daño adicional.</description>
+		</sheet>
 	</element>
 </elements>

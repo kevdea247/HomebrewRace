@@ -9,7 +9,6 @@
 
 	<element name="Nautilus" type="Race" source="HomebrewRace" id="ID_HOMEBREWRACE_RACE_NAUTILUS">
 		<description>
-			<!-- (tu descripción igual que antes) -->
 		</description>
 		<sheet display="false" />
 		<rules>
