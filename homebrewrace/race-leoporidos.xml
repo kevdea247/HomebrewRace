@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Leoporidos</name>
-		<update version="1.0.1">
+		<update version="1.0.2">
 			<file name="race-leoporidos.xml" url="https://raw.githubusercontent.com/kevdea247/HomebrewRace/main/homebrewrace/race-leoporidos.xml" />
 		</update>
 	</info>
